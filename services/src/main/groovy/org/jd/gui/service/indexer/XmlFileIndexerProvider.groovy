@@ -24,7 +24,7 @@ class XmlFileIndexerProvider extends AbstractIndexerProvider {
     /**
      * @return local + optional external selectors
      */
-    String[] getSelectors() { ['*:file:*.xml'] + externalSelectors }
+    String[] getSelectors() { ['*:file:*.xml', '*:file:*.palette', '*:file:*.hbs'] + externalSelectors }
 
     @CompileStatic
     void index(API api, Container.Entry entry, Indexes indexes) {

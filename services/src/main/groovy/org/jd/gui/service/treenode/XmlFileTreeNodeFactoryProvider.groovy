@@ -21,7 +21,7 @@ class XmlFileTreeNodeFactoryProvider extends TextFileTreeNodeFactoryProvider {
     /**
      * @return local + optional external selectors
      */
-    String[] getSelectors() { ['*:file:*.xml'] + externalSelectors }
+    String[] getSelectors() { ['*:file:*.xml', '*:file:*.palette'] + externalSelectors }
 
     public <T extends DefaultMutableTreeNode & ContainerEntryGettable & UriGettable> T make(API api, Container.Entry entry) {
         int lastSlashIndex = entry.path.lastIndexOf('/')

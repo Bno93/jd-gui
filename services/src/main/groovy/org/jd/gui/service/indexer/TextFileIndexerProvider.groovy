@@ -18,7 +18,7 @@ class TextFileIndexerProvider extends AbstractIndexerProvider {
     String[] getSelectors() {
         ['*:file:*.txt', '*:file:*.html', '*:file:*.xhtml', '*:file:*.js', '*:file:*.jsp', '*:file:*.jspf',
          '*:file:*.xml', '*:file:*.xsl', '*:file:*.xslt', '*:file:*.xsd', '*:file:*.properties', '*:file:*.sql',
-         '*:file:*.yaml', '*:file:*.yml', '*:file:*.json'] + externalSelectors }
+         '*:file:*.yaml', '*:file:*.yml', '*:file:*.json', '*:file:*.lexicon', '*:file:*.palette', '*:file:*.hbs'] + externalSelectors }
 
     @CompileStatic
     void index(API api, Container.Entry entry, Indexes indexes) {

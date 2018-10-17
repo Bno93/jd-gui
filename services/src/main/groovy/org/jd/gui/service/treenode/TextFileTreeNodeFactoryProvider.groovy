@@ -31,7 +31,7 @@ class TextFileTreeNodeFactoryProvider extends FileTreeNodeFactoryProvider {
     /**
      * @return local + optional external selectors
      */
-    String[] getSelectors() { ['*:file:*.txt', '*:file:*.md', '*:file:*.SF', '*:file:*.policy', '*:file:*.yaml', '*:file:*.yml'] + externalSelectors }
+    String[] getSelectors() { ['*:file:*.txt', '*:file:*.md', '*:file:*.SF', '*:file:*.policy', '*:file:*.yaml', '*:file:*.yml', '*:file:*.lexicon', '*:file:*.palette'] + externalSelectors }
 
     public <T extends DefaultMutableTreeNode & ContainerEntryGettable & UriGettable> T make(API api, Container.Entry entry) {
         int lastSlashIndex = entry.path.lastIndexOf('/')
